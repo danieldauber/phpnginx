@@ -56,6 +56,10 @@ RUN echo "extension=apcu.so" > /usr/local/etc/php/conf.d/apcu.ini
 RUN pecl install igbinary
 RUN echo "extension=igbinary.so" > /usr/local/etc/php/conf.d/igbinary.ini
 
+RUN pecl install mongodb
+
+RUN echo "extension=mongodb.so" > /usr/local/etc/php/conf.d/20-mongodb.ini
+
 # RUN rm /etc/localtime ; \
 #     ln -s /usr/share/zoneinfo/Brazil/East /etc/localtime
 
